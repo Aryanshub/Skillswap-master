@@ -138,7 +138,6 @@ export const CreatePost = () => {
             value={title}
             handler={handleTitleChange}
             placeholder="Enter a catchy title..."
-            maxLength={100}
           />
           {errors.title && (
             <p className="text-red-500 text-sm mt-1">{errors.title}</p>
@@ -155,7 +154,6 @@ export const CreatePost = () => {
           <RichTextEditor 
             content={content} 
             onChange={handleContentChange}
-            placeholder="Write your post content here..."
           />
           {errors.content && (
             <p className="text-red-500 text-sm mt-1">{errors.content}</p>
