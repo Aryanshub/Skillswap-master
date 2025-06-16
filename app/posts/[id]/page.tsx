@@ -4,11 +4,8 @@ import Link from "next/link";
 import PostInteraction from "@/components/PostInteraction";
 import Button from "@/components/Button";
 
-type PostDetailPageProps = {
-  params: { id: string };
-};
 
-export default async function PostDetailPage({ params }: PostDetailPageProps) {
+export default async function PostDetailPage({ params }: any) {
   const post = await FetchPostById(params.id);
 
   if (!post || !post.post) {
