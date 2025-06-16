@@ -140,14 +140,7 @@ const Login = () => {
         </button>
       </form>
 
-      <div className="mt-6 text-center">
-        <Link
-          href="/auth/forgotpass"
-          className="text-sm text-gray-600 hover:text-blue-600 transition-colors"
-        >
-          Forgot your password?
-        </Link>
-      </div>
+      
     </div>
   );
 };
