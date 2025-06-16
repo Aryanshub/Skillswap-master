@@ -38,5 +38,13 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aryanshub/Skillswap-master.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aryanshub/Skillswap-master/issues"
+  },
+  "homepage": "https://github.com/Aryanshub/Skillswap-master#readme"
 }
