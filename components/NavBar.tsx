@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { Menu, X, User, LogOut, Home, FileText, Plus } from "lucide-react";
+import { Menu, X, User, LogOut, Home,Info, FileText, Plus } from "lucide-react";
+
 
 const NavBar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -122,6 +123,7 @@ const NavBar = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-2 items-center">
               <NavLink href="/" icon={Home}>Home</NavLink>
+              <NavLink href="/auth/about" icon={Info}>About</NavLink>
               <NavLink href="/posts" icon={FileText}>Posts</NavLink>
               <NavLink href="/createpost" icon={Plus}>Create</NavLink>
 
@@ -189,6 +191,9 @@ const NavBar = () => {
           <div className="px-4 py-4 space-y-2">
             <div onClick={() => setIsMenuOpen(false)}>
               <NavLink href="/" icon={Home}>Home</NavLink>
+            </div>
+            <div onClick={() => setIsMenuOpen(false)}>
+              <NavLink href="/auth/about" icon={Info}><span>About</span></NavLink>
             </div>
             <div onClick={() => setIsMenuOpen(false)}>
               <NavLink href="/posts" icon={FileText}>Posts</NavLink>

@@ -1,5 +1,6 @@
 "use server";
 import prisma from "@/db";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 interface User {
@@ -16,11 +17,15 @@ interface User2 {
 
 
 export const Signup = async ({ name, email, password }: User) => {
+  const salt = bcrypt.genSaltSync(10);
+  //hashing password
+ const  hashPassword = bcrypt.hashSync(password, salt);
+
   const user = await prisma.user.create({
     data: {
       name,
       email,
-      password,
+      password: hashPassword,
     },
     select: {
       name: true,
@@ -42,11 +47,24 @@ export const Signup = async ({ name, email, password }: User) => {
 
 
 export const Signin = async ({ email, password }: User2) => {
+   
+
   try {
+    const lookForUserinDB = await prisma.user.findUnique({ where: { email } });
+   const storedHashedPassword = lookForUserinDB?.password;
+   if (!storedHashedPassword) { 
+      console.log("user not found");
+      return "User not found";
+    }
+    //compare password
+    const isPasswordValid = bcrypt.compareSync(password, storedHashedPassword);
+    if (!isPasswordValid) {
+      console.log("wrong password");
+      return "Wrong password";
+    }
     const user = await prisma.user.findUnique({
       where: {
-        email,
-        password,
+        email
       },
       select: {
         id: true,

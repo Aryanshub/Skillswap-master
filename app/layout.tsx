@@ -15,7 +15,7 @@ import NavBar from "@/components/NavBar";
 // });
 
 export const metadata: Metadata = {
-  title: "Postify",
+  title: "Skillswap-learn Something . teach something",
   description: "Connect with people to exchange skills. Whether you're a designer wanting to learn coding, or a developer curious about photography — SkillSwap is for you.",
 };
 

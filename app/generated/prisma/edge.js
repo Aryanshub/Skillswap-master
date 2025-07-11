@@ -155,7 +155,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\iamri\\Desktop\\my-app\\app\\generated\\prisma",
+      "value": "C:\\Users\\aryan barfa\\Downloads\\Skillswap-master (2)\\Skillswap-master\\app\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -169,7 +169,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\iamri\\Desktop\\my-app\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\aryan barfa\\Downloads\\Skillswap-master (2)\\Skillswap-master\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -183,6 +183,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
