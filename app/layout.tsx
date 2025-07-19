@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import NavBar from "@/components/NavBar";
+import Script from "next/script";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -26,12 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script id="early-alert" strategy="beforeInteractive">
+          {`
+          alert("Welcome to SkillSwap! Connect, learn, and share skills with others.");
+            console.log("myscript.js loaded");
+          `}
+         </Script>
       <body
         className={` antialiased`}
       >
          <Toaster />
          <NavBar/>
         {children}
+         
       </body>
     </html>
   );

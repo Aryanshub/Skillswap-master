@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Info, Github, Linkedin, Mail, Coffee, Code, Bug, Zap, Heart, Sparkles, Terminal, FileCode, Cpu, Lightbulb } from "lucide-react";
+
+import { Info, Github, Linkedin, Mail, Code, Bug, Zap, Heart, Sparkles, Terminal, FileCode, Cpu, Lightbulb } from "lucide-react";
 import Image from "next/image";
+
 
 export default function AboutMe() {
   const [currentEmoji, setCurrentEmoji] = useState(0);
@@ -50,6 +52,8 @@ export default function AboutMe() {
     { label: "IDE Theme", value: "Darker than my humor", icon: Cpu },
     { label: "Languages I speak", value: "JS, TS, Hinglish, and Emoji 😎", icon: Code }
   ];
+  
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-20 px-4">

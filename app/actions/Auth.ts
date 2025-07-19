@@ -1,4 +1,6 @@
 "use server";
+//its a  server action
+//this file is used for authentication actions like signup and signin 
 import prisma from "@/db";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
