@@ -48,7 +48,10 @@ export const SkillPost = async ({
     });
     console.log("Post created successfully");
     return { message: "Post created successfully", post };
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error creating post:", error);
+    return { message: "Error creating post" };
+  }
 };
 
 export const FetchPost = async () => {
@@ -165,8 +168,9 @@ export const deletePost = async (postId: string, userId: string) => {
       success: true,
       message: "Post deleted successfully.",
     };
-  } catch (error:any) {
-    console.error("Delete post error:", error.message);
+  } catch (error) {
+    // Log the error for debugging purposes(error:any)
+    console.error("Delete post error:", error);
     return {
       success: false,
       message:

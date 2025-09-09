@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import Image from 'next/image';
 import { SkillPost } from '@/app/actions/Skillpost';
 import { InputElement } from './Signup';
 import { useRouter } from 'next/navigation';
@@ -175,9 +176,11 @@ export const CreatePost = () => {
           {mediaUrl && isValidUrl(mediaUrl) && (
             <div className="mt-2">
               <p className="text-sm text-gray-600 mb-2">Preview:</p>
-              <img 
+              <Image
                 src={mediaUrl} 
                 alt="Media preview" 
+                width={400} 
+                height={200}
                 className="max-w-full h-32 object-cover rounded border"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';

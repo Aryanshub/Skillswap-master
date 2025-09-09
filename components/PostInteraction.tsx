@@ -7,9 +7,7 @@ import {
   Send, 
   Trash2, 
   User,
-  Calendar,
-  Clock,
-  Link2
+  Clock
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -34,7 +32,6 @@ interface PostInteractionProps {
 
 export default function PostInteraction({
   postId,
-  userId,
   comments,
 }: PostInteractionProps) {
   const [allComment, setAllComment] = useState(comments);

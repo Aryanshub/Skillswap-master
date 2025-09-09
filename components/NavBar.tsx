@@ -43,7 +43,7 @@ const NavBar = () => {
   const NavLink = ({ href, children, icon: Icon, onClick }: { 
     href?: string; 
     children: React.ReactNode; 
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<{ size?: number; className?: string }>;
     onClick?: () => void;
   }) => {
     const isActive = pathname === href;

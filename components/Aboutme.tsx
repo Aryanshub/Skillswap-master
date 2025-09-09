@@ -5,6 +5,7 @@ import { Info, Github, Linkedin, Mail, Code, Bug, Zap, Heart, Sparkles, Terminal
 import Image from "next/image";
 
 
+
 export default function AboutMe() {
   const [currentEmoji, setCurrentEmoji] = useState(0);
   const [typedText, setTypedText] = useState("");
@@ -12,7 +13,7 @@ export default function AboutMe() {
   
   const emojis = ["👨‍💻", "🚀", "🔥", "⚡", "🎯", "💻", "🧠", "✨"];
   const typewriterText = "The Commit You'll Never Ctrl+Z";
-  
+
   useEffect(() => {
     setIsVisible(true);
     
@@ -36,7 +37,7 @@ export default function AboutMe() {
       clearInterval(emojiInterval);
       clearInterval(typeInterval);
     };
-  }, []);
+  }, [emojis.length, typewriterText]);
 
   const skills = [
     { icon: Code, text: "Full-stack apps (Next.js + Prisma + PostgreSQL)", color: "text-blue-600" },
@@ -94,7 +95,7 @@ export default function AboutMe() {
                   </p>
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  I'm a full-stack developer, bug hunter, and chaos-powered UI crafter with a love for pixels, puns, and pushing to GitHub at 3AM.
+                  I&apos;m a full-stack developer, bug hunter, and chaos-powered UI crafter with a love for pixels, puns, and pushing to GitHub at 3AM.
                 </p>
               </div>
             </div>
@@ -112,8 +113,8 @@ export default function AboutMe() {
             </div>
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
               <p className="text-lg text-gray-700 leading-relaxed">
-                More than just a coder — I'm a blend of creativity, caffeine, and Ctrl+Z. I don't just build things that work; 
-                I build things that <span className="font-bold text-purple-600 animate-pulse">vibe</span>. Whether it's crafting smooth UIs or surviving JS errors, 
+                More than just a coder — I&apos;m a blend of creativity, caffeine, and Ctrl+Z. I don&apos;t just build things that work; 
+                I build things that <span className="font-bold text-purple-600 animate-pulse">vibe</span>. Whether it&apos;s crafting smooth UIs or surviving JS errors, 
                 I do it with <span className="inline-flex items-center gap-1 font-semibold text-pink-600">
                   <Sparkles className="w-4 h-4" />style and snacks<Sparkles className="w-4 h-4" />
                 </span>.
@@ -186,7 +187,7 @@ export default function AboutMe() {
             </div>
             <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 border border-orange-100">
               <p className="text-gray-700 leading-relaxed mb-4">
-                I'm not your average tech bro. I'm the <span className="font-mono bg-gray-200 px-2 py-1 rounded">.script</span> your browser warns about 😅, 
+                I&apos;m not your average tech bro. I&apos;m the <span className="font-mono bg-gray-200 px-2 py-1 rounded">.script</span> your browser warns about 😅, 
                 the guy who talks to bugs like they owe him rent, and the dev who styles life with Tailwind and troubles with dark humor.
               </p>
               <div className="grid md:grid-cols-2 gap-4 mt-6">
@@ -203,9 +204,9 @@ export default function AboutMe() {
                   <h4 className="font-bold text-red-700 mb-2">💀 Weaknesses:</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>🍕 Bad me samjhenge </li>
-                    <li>🌙 "Bas 10 minute aur" since 2018</li>
+                    <li>🌙 &quot;Bas 10 minute aur&quot; since 2018</li>
                     <li>🧃 Tapping F5 like life source</li>
-                    <li>🌪️ Spaghetti code called "clean"</li>
+                    <li>🌪️ Spaghetti code called &quot;clean&quot;</li>
                   </ul>
                 </div>
               </div>
@@ -217,9 +218,9 @@ export default function AboutMe() {
         <div className={`transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 shadow-2xl text-white">
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">📫 Let's Connect!</h2>
+              <h2 className="text-3xl font-bold mb-4">📫 Let&apos;s Connect!</h2>
               <p className="text-xl mb-8 text-indigo-100">
-                Want to collab, hire, roast code together, or just share memes? Let's connect! 👇
+                Want to collab, hire, roast code together, or just share memes? Let&apos;s connect! 👇
               </p>
               <div className="flex justify-center gap-6">
                 <div className="group">

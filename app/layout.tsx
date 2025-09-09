@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import NavBar from "@/components/NavBar";
-import Script from "next/script";
+
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -27,12 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Script id="early-alert" strategy="beforeInteractive">
+      {/* this is script Component that is used to load external scripts, such as Google Analytics or other third-party libraries, in a Next.js application. It allows you to specify when the script should be loaded (e.g., before the page is interactive) and ensures that it does not block the rendering of the page. */}
+      {/* <Script id="early-alert" strategy="beforeInteractive">
           {`
           alert("Welcome to SkillSwap! Connect, learn, and share skills with others.");
             console.log("myscript.js loaded");
           `}
-         </Script>
+         </Script> */}
       <body
         className={` antialiased`}
       >

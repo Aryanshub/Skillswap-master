@@ -32,7 +32,7 @@ export default function SkillSwapLanding() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            Connect with people to exchange skills. Whether you're a designer
+            Connect with people to exchange skills. Whether you&apos;re a designer
             wanting to learn coding, or a developer curious about photography —
             SkillSwap is for you.
           </motion.p>

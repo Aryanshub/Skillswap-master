@@ -100,14 +100,15 @@ export default function SignupForm() {
       
       // Navigate to home page
       router.push("/");
-      
-    } catch (error: any) {
+
+    } catch (error) {
+      toast.error("Signup failed. Please try again.");
       console.error("Signup error:", error);
       
       // Handle specific error messages
-      if (error?.message?.includes("email")) {
+      if (error instanceof Error && error.message?.includes("email")) {
         toast.error("Email already exists. Please use a different email.");
-      } else if (error?.message?.includes("password")) {
+      } else if (error instanceof Error && error.message?.includes("password")) {
         toast.error("Password requirements not met.");
       } else {
         toast.error("Signup failed. Please try again.");

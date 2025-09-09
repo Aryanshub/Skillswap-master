@@ -1,12 +1,16 @@
+
 import React from "react";
 import { FetchPostById } from "@/app/actions/Skillpost";
 import Link from "next/link";
+import Image from "next/image";
 import PostInteraction from "@/components/PostInteraction";
 import Button from "@/components/Button";
 
 
 export default async function PostDetailPage({ params }: any) {
-  const post = await FetchPostById(params.id);
+
+  
+  const post = await FetchPostById(params.id as string);
 
   if (!post || !post.post) {
     return (
@@ -17,10 +21,11 @@ export default async function PostDetailPage({ params }: any) {
             Post Not Found
           </h1>
           <p className="text-red-500 mb-4">
-            The post you're looking for doesn't exist or has been removed.
+            The post you&apos;re looking for doesn&apos;t exist or has been
+            removed.
           </p>
-          <Link 
-            href="/posts" 
+          <Link
+            href="/posts"
             className="inline-block bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
           >
             Back to Posts
@@ -37,7 +42,6 @@ export default async function PostDetailPage({ params }: any) {
     author,
     authorId,
     comments = [],
-    likes = [],
     mediaUrl,
   } = post.post;
 
@@ -65,10 +69,12 @@ export default async function PostDetailPage({ params }: any) {
         {/* Media Section */}
         {mediaUrl && (
           <div className="rounded-lg overflow-hidden">
-            <img
+            <Image
               src={mediaUrl}
               alt={`Media for ${title}`}
               className="w-full max-h-[500px] object-cover"
+              width={500}
+              height={500}
             />
           </div>
         )}
@@ -83,31 +89,27 @@ export default async function PostDetailPage({ params }: any) {
 
         {/* Interaction Section */}
         <div className="pt-6 border-t">
-          <PostInteraction
-            postId={id}
-            userId={authorId}
-            comments={comments}
-          />
+          <PostInteraction postId={id} userId={authorId} comments={comments} />
         </div>
       </article>
 
       {/* Navigation */}
       <div className="mt-8">
-        <Link 
-          href="/posts" 
+        <Link
+          href="/posts"
           className="inline-flex items-center text-blue-600 hover:text-blue-800 hover:underline transition-colors"
         >
-          <svg 
-            className="w-4 h-4 mr-2" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M10 19l-7-7m0 0l7-7m-7 7h18" 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
           Back to all posts

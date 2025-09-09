@@ -160,7 +160,7 @@ const Posts = () => {
           Skill Exchange Posts
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover amazing skills shared by our community members. Find something you'd like to learn or share your expertise!
+          Discover amazing skills shared by our community members. Find something you&apos;d like to learn or share your expertise!
         </p>
       </div>
 

@@ -18,7 +18,7 @@ interface PostType {
 }
 
 
-export default function PostCard({ title, content, authorName, id }: PostType) {
+export default function PostCard({ title, content, authorName}: PostType) {
   const plainContent = useMemo(() => stripHtml(content), [content]);
 
   const previewText =

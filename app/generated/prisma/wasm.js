@@ -4,20 +4,14 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-const {
-  Decimal,
-  objectEnumValues,
-  makeStrictEnum,
-  Public,
-  getRuntime,
-  skip
-} = require('./runtime/index-browser.js')
+import { Decimal, objectEnumValues, makeStrictEnum, Public, getRuntime } from './runtime/index-browser.js';
 
 
 const Prisma = {}
 
-exports.Prisma = Prisma
-exports.$Enums = {}
+const _Prisma = Prisma;
+export { _Prisma as Prisma };
+export const $Enums = {}
 
 /**
  * Prisma Client JS version: 6.8.2
@@ -113,21 +107,21 @@ Prisma.NullTypes = {
  * Enums
  */
 
-exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
+_Prisma.TransactionIsolationLevel = makeStrictEnum({
   ReadUncommitted: 'ReadUncommitted',
   ReadCommitted: 'ReadCommitted',
   RepeatableRead: 'RepeatableRead',
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+_Prisma.UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
   password: 'password'
 };
 
-exports.Prisma.SkillPostScalarFieldEnum = {
+_Prisma.SkillPostScalarFieldEnum = {
   id: 'id',
   title: 'title',
   content: 'content',
@@ -136,7 +130,7 @@ exports.Prisma.SkillPostScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.CommentScalarFieldEnum = {
+_Prisma.CommentScalarFieldEnum = {
   id: 'id',
   content: 'content',
   postId: 'postId',
@@ -144,29 +138,29 @@ exports.Prisma.CommentScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
-exports.Prisma.LikeScalarFieldEnum = {
+_Prisma.LikeScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
   postId: 'postId'
 };
 
-exports.Prisma.SortOrder = {
+_Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
 };
 
-exports.Prisma.QueryMode = {
+_Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
 
-exports.Prisma.NullsOrder = {
+_Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
 
 
-exports.Prisma.ModelName = {
+_Prisma.ModelName = {
   User: 'User',
   SkillPost: 'SkillPost',
   Comment: 'Comment',
@@ -179,7 +173,7 @@ exports.Prisma.ModelName = {
 class PrismaClient {
   constructor() {
     return new Proxy(this, {
-      get(target, prop) {
+      get() {
         let message
         const runtime = getRuntime()
         if (runtime.isEdge) {
@@ -200,6 +194,7 @@ If this is unexpected, please open an issue: https://pris.ly/prisma-prisma-bug-r
   }
 }
 
-exports.PrismaClient = PrismaClient
+const _PrismaClient = PrismaClient;
+export { _PrismaClient as PrismaClient };
 
 Object.assign(exports, Prisma)

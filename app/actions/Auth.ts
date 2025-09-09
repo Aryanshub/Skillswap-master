@@ -88,6 +88,6 @@ export const Signin = async ({ email, password }: User2) => {
     console.log("User found!");
     return {user,token}
   } catch (error) {
-    console.log("wrong ");
+    console.log(" wrong credentials", error);
   }
 };
