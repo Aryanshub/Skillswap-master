@@ -7,15 +7,11 @@ import PostInteraction from "@/components/PostInteraction";
 import Button from "@/components/Button";
 
 
+export default async function PostDetailPage(props: { params: Promise<{ id: string }> }) {
+  const { id: routeId } = await props.params;  // ✅ await karo
 
+  const post = await FetchPostById(routeId);
 
-type PostDetailPageProps = {
-  params: { id: string };
-};
-
-export default async function PostDetailPage({ params }: PostDetailPageProps) {
-
-  const post = await FetchPostById(params.id);
 
   if (!post || !post.post) {
     return (
