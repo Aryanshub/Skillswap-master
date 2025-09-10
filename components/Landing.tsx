@@ -7,10 +7,11 @@ import { motion } from "framer-motion";
 
 export default function SkillSwapLanding() {
   return (
-    <div className="bg-white pt-28 text-gray-900 overflow-hidden">
-      <section className="pb-16 px-4 max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+  <div className="bg-white pt-12 text-gray-900 overflow-hidden">
+  <section className="pb-16 px-4 max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row gap-12 items-center">
         {/* Left Section: Text */}
         <motion.div
+          className="w-full lg:w-1/2"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -60,20 +61,19 @@ export default function SkillSwapLanding() {
 
         {/* Right Section: Image */}
         <motion.div
-          className="mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
+          className="w-full mb-8 lg:mb-0 lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
           <Image
-  src="/hero.png"
-  alt="SkillSwap Hero - People exchanging skills and learning together"
-  width={500}
-  height={500}
-  className="rounded-xl"
-  priority // Add this for above-the-fold images
- // placeholder="blur" // Optional: add blur placeholder
-/>
+            src="/hero.png"
+            alt="SkillSwap Hero - People exchanging skills and learning together"
+            width={500}
+            height={500}
+            className="rounded-xl w-full h-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
+            priority
+          />
         </motion.div>
       </section>
     </div>
