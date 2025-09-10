@@ -222,7 +222,7 @@ export default function AboutMe() {
               <p className="text-xl mb-8 text-indigo-100">
                 Want to collab, hire, roast code together, or just share memes? Let&apos;s connect! 👇
               </p>
-              // now lets add  the links to github, linkedin and email in a nice way
+             
               <div className="flex justify-center gap-6">
                 <div className="group">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 cursor-pointer hover:scale-110">
