@@ -60,7 +60,7 @@ export default function SkillSwapLanding() {
 
         {/* Right Section: Image */}
         <motion.div
-          className="hidden lg:block ml-24"
+          className="mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.4 }}

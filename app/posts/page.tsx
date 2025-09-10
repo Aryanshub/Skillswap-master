@@ -57,7 +57,7 @@ const EmptyState = () => {
           Be the first to share your skills with the community and start exchanging knowledge!
         </p>
         <Link 
-          href="/create-post"
+          href="/createpost"
           className="inline-flex items-center bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-800 transition-colors duration-200 font-medium"
         >
           <svg 
