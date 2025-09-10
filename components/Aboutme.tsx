@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-import { Info, Github, Linkedin, Mail, Code, Bug, Zap, Heart, Sparkles, Terminal, FileCode, Cpu, Lightbulb } from "lucide-react";
+import { Info, Github, Linkedin, Mail, Code, Bug, Zap, Heart, Sparkles, Terminal, FileCode, Cpu, Lightbulb, Link } from "lucide-react";
 import Image from "next/image";
 
 
@@ -222,10 +222,13 @@ export default function AboutMe() {
               <p className="text-xl mb-8 text-indigo-100">
                 Want to collab, hire, roast code together, or just share memes? Let&apos;s connect! 👇
               </p>
+              // now lets add  the links to github, linkedin and email in a nice way
               <div className="flex justify-center gap-6">
                 <div className="group">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 cursor-pointer hover:scale-110">
-                    <Github className="w-8 h-8 text-white group-hover:animate-bounce" />
+                    <Link href="https://github.com/Aryanshub">
+                      <Github className="w-8 h-8 text-white group-hover:animate-bounce" />
+                    </Link>
                   </div>
                   <p className="text-sm mt-2 text-indigo-200">GitHub</p>
                 </div>
