@@ -7,10 +7,15 @@ import PostInteraction from "@/components/PostInteraction";
 import Button from "@/components/Button";
 
 
-export default async function PostDetailPage({ params }: any) {
 
-  
-  const post = await FetchPostById(params.id as string);
+
+type PostDetailPageProps = {
+  params: { id: string };
+};
+
+export default async function PostDetailPage({ params }: PostDetailPageProps) {
+
+  const post = await FetchPostById(params.id);
 
   if (!post || !post.post) {
     return (
