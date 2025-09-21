@@ -3,6 +3,11 @@ import PostCard from "@/components/PostCard";
 import { FetchPost } from "../actions/Skillpost";
 import Link from "next/link";
 
+// Disable caching for this page
+export const revalidate = 0;
+export const dynamic = 'force-dynamic';
+
+
 // Type definitions
 interface Post {
   id: string;

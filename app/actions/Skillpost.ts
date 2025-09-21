@@ -1,6 +1,8 @@
 "use server";
 import prisma from "@/db";
 import jwt, { JwtPayload } from "jsonwebtoken";
+import { unstable_noStore as noStore } from "next/cache";
+import { revalidatePath } from "next/cache";
 
 interface skillpost {
   title: string;
@@ -47,6 +49,11 @@ export const SkillPost = async ({
       },
     });
     console.log("Post created successfully");
+    
+    // Revalidate the posts page to show new content
+    revalidatePath('/posts');
+    revalidatePath('/');
+    
     return { message: "Post created successfully", post };
   } catch (error) {
     console.error("Error creating post:", error);
@@ -55,6 +62,8 @@ export const SkillPost = async ({
 };
 
 export const FetchPost = async () => {
+  noStore(); // Disable caching for this function
+  console.log("FetchPost called at:", new Date().toISOString());
   try {
     const posts = await prisma.skillPost.findMany({
       select: {
@@ -68,7 +77,9 @@ export const FetchPost = async () => {
           },
         },
       },
+      orderBy: { createdAt: "desc" },
     });
+    console.log("Posts fetched:", posts.length);
     return posts;
   } catch (error) {
     console.error("Error fetching posts:", error);
@@ -77,6 +88,7 @@ export const FetchPost = async () => {
 };
 
 export const FetchPostById = async (id: string) => {
+  noStore(); // Disable caching for this function
   try {
     if (!id) {
       return { message: "Details not available" };
@@ -164,6 +176,10 @@ export const deletePost = async (postId: string, userId: string) => {
         id: postId,
       },
     });
+
+    // Revalidate the posts page to reflect deletion
+    revalidatePath('/posts');
+    revalidatePath('/');
 
     return {
       success: true,
