@@ -4,13 +4,19 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     domains: [
-      "www.google.com",
-      "img-s-msn-com.akamaized.net" ,
-      "hindibusinessstandard.imagibyte.sortdcdn.net" ,
-      "encrypted-tbn0.gstatic.com"  ,
-      "images.unsplash.com",
-      "scontent.frpr1-1.fna.fbcdn.net",
-      "wallpapers.com"
+      'images.unsplash.com',
+      'cdn.pixabay.com',
+      'res.cloudinary.com',
+      'imgur.com',
+      'i.imgur.com',
+      'pbs.twimg.com',
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com',
+      's3.amazonaws.com',
+      'cdn.discordapp.com',
+      'media.istockphoto.com',
+      'staticflickr.com',
+      'cricket.com'     // Example from your previous error
       
     ],
   }

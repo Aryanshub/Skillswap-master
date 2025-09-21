@@ -115,6 +115,7 @@ export const FetchPostById = async (id: string) => {
     return { post };
   } catch (error) {
     console.log(error);
+    console.log("Error fetching post by ID:", error);
     return { message: "Error fetching post" };
   }
 };

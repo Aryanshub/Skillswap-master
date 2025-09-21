@@ -123,7 +123,7 @@ const NavBar = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-2 items-center">
               <NavLink href="/" icon={Home}>Home</NavLink>
-              <NavLink href="/auth/about" icon={Info}>About</NavLink>
+              <NavLink href="/auth/aboutus" icon={Info}>About Us</NavLink>
               <NavLink href="/posts" icon={FileText}>Posts</NavLink>
               <NavLink href="/createpost" icon={Plus}>Create</NavLink>
 
@@ -193,7 +193,7 @@ const NavBar = () => {
               <NavLink href="/" icon={Home}>Home</NavLink>
             </div>
             <div onClick={() => setIsMenuOpen(false)}>
-              <NavLink href="/auth/about" icon={Info}><span>About</span></NavLink>
+              <NavLink href="/auth/aboutus" icon={Info}><span>About Us</span></NavLink>
             </div>
             <div onClick={() => setIsMenuOpen(false)}>
               <NavLink href="/posts" icon={FileText}>Posts</NavLink>
